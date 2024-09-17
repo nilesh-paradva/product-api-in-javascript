@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        tr,td,th{
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal fade" id="selectData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="text-center">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Selected Data</h1>
+            </div>
+            <div class="modal-body">
+                <table class="w-100" border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>price</th>
+                            <th>Quntity</th>
+                            <th>rating</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="select-view">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center py-3 border-top">
+                <p id="total-price"></p>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <a href="#selectData" data-bs-toggle="modal" class="btn btn-primary position-relative float-end"><i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count">1</span>
+                </a>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="w-100" border="1" cellpadding="10">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>price</th>
+                                    <th>rating</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-view">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
